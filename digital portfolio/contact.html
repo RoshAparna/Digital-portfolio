@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Roshni Aparna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ribbon"><div class="container">Tell me about your project and timeline.</div></div>
+  <header class="header">
+    <div class="container header__wrap">
+      <a class="logo" href="index.html">RA Collective</a>
+      <nav class="nav">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+        <ul id="navMenu" class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="ai-in-construction.html">AI in Construction</a></li>
+          <li><a class="is-active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section contact">
+    <div class="container contact__wrap">
+      <div class="contact__text">
+        <h1 class="section__title">Contact Me</h1>
+        <p>I’m open to collaborations, workshops, and student–industry partnerships. Share your scope, timeline, and goals.</p>
+        <a class="link" href="mailto:hello@roshniaparna.dev">hello@roshniaparna.dev</a>
+      </div>
+
+      <form class="contact__form" action="#" method="post">
+        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+        <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p class="form__note">Replace <em>action</em> with Formspree/Netlify to activate.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container footer__grid"><div></div><div class="footer__note"><p>© <span id="y"></span> Roshni Aparna</p></div></div></footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();document.querySelector('.nav__toggle').onclick=()=>document.getElementById('navMenu').classList.toggle('is-open');</script>
+</body>
+</html>
