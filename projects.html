@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects & Assignments — AI in Construction</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ribbon"><div class="container">AI in Construction • Course hub — Projects & Assignments</div></div>
+
+  <header class="header">
+    <div class="container header__wrap">
+      <a class="logo" href="index.html">RA Collective</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+        <ul id="navMenu" class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a class="is-active" href="ai-in-construction.html">AI in Construction</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <section class="ai-hero">
+    <div class="container">
+      <h1 class="ai-hero__title">Projects & Assignments</h1>
+      <p class="ai-hero__sub">Expand each section to view a short brief, any linked PDFs, and scenario details.</p>
+    </div>
+  </section>
+
+  <!-- Accordions -->
+  <main class="section">
+    <div class="container">
+
+      <!-- 1) Evaluating LLMs -->
+      <button class="acc" aria-expanded="false" aria-controls="acc-llm">Evaluating LLMs using Construction Scenario Prompts</button>
+      <div id="acc-llm" class="acc__panel" hidden>
+        <h3 class="acc__title">Brief</h3>
+        <p>
+          This project explores how different prompt styles and levels of contextual information affect the quality,
+          relevance, and accuracy of AI-generated responses across various LLMs (<strong>GPT, Gemini, Grok, Claude</strong>).
+          The focus is on prompt engineering and context design in construction-related scenarios to improve communication
+          and productivity, and to check how different LLMs respond to the same prompt.
+        </p>
+
+        <h3 class="acc__title">Scenario</h3>
+        <p><em>Draft a COR for relocating tray and 4 inch EMT at Area A-110. The work is performed during night hours.</em></p>
+
+        <div class="acc__actions">
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://pdf.ac/Qpy6fpwB5">Open project PDF →</a>
+        </div>
+      </div>
+
+      <!-- 2) Creation of GPT -->
+      <button class="acc" aria-expanded="false" aria-controls="acc-gpt">Creation of GPT</button>
+      <div id="acc-gpt" class="acc__panel" hidden>
+        <p>
+          This focuses on how generative AI can be used in the construction industry. Students identify real-world
+          problems and create a <strong>custom GPT</strong> with ChatGPT to tackle or improve specific tasks (e.g., mapping scope → pay items,
+          drafting RFIs/COs with rubrics, or estimating helpers with citations and confidence notes).
+        </p>
+        <div class="acc__actions">
+          <!-- Replace # with your PDF link when ready -->
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Project PDF (add link) →</a>
+        </div>
+      </div>
+
+      <!-- 3) AI tools in construction -->
+      <button class="acc" aria-expanded="false" aria-controls="acc-tools">AI Tools in Construction</button>
+      <div id="acc-tools" class="acc__panel" hidden>
+        <p>
+          A curated catalogue of estimation, scheduling, QA/QC, and facility-ops tools with use-cases, constraints,
+          and pricing notes—designed to help teams evaluate adoption pathways and risks.
+        </p>
+      </div>
+
+      <!-- 4) Book / Research Review -->
+      <button class="acc" aria-expanded="false" aria-controls="acc-review">Book / Research Review</button>
+      <div id="acc-review" class="acc__panel" hidden>
+        <p>
+          A structured critique converting research and books into field-ready ideas: objectives, methods,
+          limitations, and what it means for contractors, owners, and operators.
+        </p>
+      </div>
+
+      <!-- 5) Final Project -->
+      <button class="acc" aria-expanded="false" aria-controls="acc-final">Final Project</button>
+      <div id="acc-final" class="acc__panel" hidden>
+        <p>
+          A capstone combining prompt systems, evaluation, and prototyping (or a documented workflow) to move an
+          actual CM/FM task measurably faster—complete with risks, fallback steps, and governance.
+        </p>
+      </div>
+
+      <div class="ai-actions" style="margin-top:1.2rem">
+        <a class="btn btn--dark" href="ai-in-construction.html">← Back to AI hub</a>
+        <a class="btn" href="weekly.html">Go to Weekly Articles →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h3 class="eyebrow">Stay in touch</h3>
+        <ul class="social">
+          <li><a href="https://www.linkedin.com/in/roshni-aparna" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/roshniaparna/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer__note">
+        <p><a class="link" href="mailto:roshniaparna@gmail.com">roshniaparna@gmail.com</a><br>© <span id="y"></span> Roshni Aparna</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // mobile nav
+    const btn = document.querySelector('.nav__toggle');
+    const list = document.getElementById('navMenu');
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      list.classList.toggle('is-open');
+    });
+
+    // simple accordion behavior
+    document.querySelectorAll('.acc').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        button.setAttribute('aria-expanded', String(!expanded));
+        if (expanded) {
+          panel.setAttribute('hidden', '');
+        } else {
+          panel.removeAttribute('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
